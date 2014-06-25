@@ -6,15 +6,18 @@
 @import "_mixin.less";
 @import "_variable.less";
 
+@import url(http://fonts.googleapis.com/css?family=Economica:400,700);
+
 /* Common Styles */
 
 // Common
 
 html,
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
-    background: @bg;
+    font-family: 'Avenir Next', 'Helvetica Neue', Helvetica, Arial, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+    background: @bg url('../dist/images/bg.png');
     color: @base;
+    -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -33,6 +36,7 @@ a {
 }
 
 h1,h2,h3,h4,h5,h6 {
+    font-family: 'Economica', sans-serif;
     a,a:hover {
         color: @base;
         text-decoration: none;
@@ -74,12 +78,45 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .btn-large {
-    padding: .8em 2em;
-    font-size: 150%;
+    padding: .5em 1em;
+    font-size: 100%;
     -moz-box-sizing:border-box;
     box-sizing: border-box;
 }
 
 /* End Common Styles */
+
+.container {
+    width: 800px;
+    margin: 0 auto;
+    padding-top: 3em;
+
+    h1 {
+        font-size: 500%;
+        margin: .1em 0;
+    }
+}
+
+.row {
+    .clearfix;
+    .span {
+        width: 50%;
+        float: left;
+    }
+
+    .makibot {
+        background: #fff url('../dist/images/paper.png');
+        .box-shadow(0,0,4px,rgba(0,0,0,.15));
+        padding: 15px;
+        -moz-transform: rotate(10deg);
+        -webkit-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+    }
+}
+
+.footer {
+    text-align: center;
+}
 
 @import "_media-queries.less";
